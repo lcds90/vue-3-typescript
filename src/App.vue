@@ -1,23 +1,16 @@
 <template>
-	<div>
-	  <p>{{ count }}</p>
-	  <button @click="reset">Reset</button>
-	</div>
+  <div>
+    <p>{{ count }}</p>
+    <button @click="reset">Reset</button>
+  </div>
 </template>
 
-<script>
-import useAutoCount from './composables/useAutoCount'
+<script setup>
+import useAutoCount from "./composables/useAutoCount";
 
-export default {
-  name: 'App',
-  setup() {
-    const { count } = useAutoCount(0)
+const { count } = useAutoCount(0);
 
-    function reset() {
-      count.value = 0
-    }
-
-    return { count, reset }
-  }
+function reset() {
+  count.value = 0;
 }
 </script>
