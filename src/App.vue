@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import useAutoCount from "./composables/useAutoCount";
 
 const { count } = useAutoCount(0);
